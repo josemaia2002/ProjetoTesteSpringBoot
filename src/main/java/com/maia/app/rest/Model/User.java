@@ -7,22 +7,23 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
+@Table(name="user", schema = "public")    
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column
+    @Column(name="first_name")
     private String firstName;
 
-    @Column
+    @Column(name="last_name")
     private String lastName;
 
-    @Column
+    @Column(name="age")
     private int age;
 
-    @Column
+    @Column(name="occupation")
     private String occupation;
 
     public long getId() {
